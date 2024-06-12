@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AspireMaui2.Blazor.ClientStub": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

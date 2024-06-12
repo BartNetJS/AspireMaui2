@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>181e1e69-56dc-4d9a-900e-41247ac217b4</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspireMaui2.ApiService\AspireMaui2.ApiService.csproj" />
+    <ProjectReference Include="..\AspireMaui2.ClientStub\AspireMaui2.ClientStub.csproj" />
+    <ProjectReference Include="..\AspireMaui2.Web\AspireMaui2.Web\AspireMaui2.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.1" />
+    <PackageReference Include="AspireMobile.Hosting" Version="0.7.130-beta" />
+  </ItemGroup>
+
+</Project>

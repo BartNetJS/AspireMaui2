@@ -1,0 +1,84 @@
+﻿@page "/"
+@* @rendermode InteractiveWebAssembly *@
+@inject IJSRuntime JSRuntime
+
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@* @if (!isApplicationReady)
+{
+    <p>Loading...</p>
+} else
+{ *@
+    <button @onclick="StartMedia">Start Video and Audio</button>
+    <button @onclick="CaptureImage">Capture Image</button>
+
+    <div class="media-container">
+        <video id="videoElement" autoplay></video>
+@*         <audio id="audioElement" controls></audio> *@
+        <canvas id="canvasElement" style="display:none;"></canvas>
+        <img id="imageElement" alt="Captured Image" />
+
+    </div>
+
+@* } *@
+
+
+<script>
+    async function startMedia() {
+        try {
+            const videoElement = document.getElementById('videoElement');
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            videoElement.srcObject = stream;
+        } catch (err) {
+            console.error('Error accessing media devices.', err);
+        }
+    }
+    async function takePicture() {
+        try {
+            const canvas = document.getElementById('canvasElement');
+            const video = document.getElementById('videoElement');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageDataUrl = canvas.toDataURL('image/png', 0.5);
+            document.getElementById('imageElement').src = imageDataUrl; // Set the src directly
+        } catch (err) {
+            console.error('Error capturing image.', err);
+        }
+    }
+
+</script>
+
+@code {
+    private bool isApplicationReady = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            isApplicationReady = true;
+            StateHasChanged();  // This call re-renders the component, now aware that the app is ready
+        }
+    }
+
+    private async Task StartMedia()
+    {
+        await JSRuntime.InvokeVoidAsync("startMedia");
+    }
+    string imageUrl; // To store the captured image URL
+
+    private async Task CaptureImage()
+    {
+        try
+        {
+            await JSRuntime.InvokeVoidAsync("takePicture");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

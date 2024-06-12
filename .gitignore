@@ -1,0 +1,7 @@
+.azure
+.vs/*
+.vscode
+bin
+obj
+node_modules
+
