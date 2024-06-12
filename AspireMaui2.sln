@@ -12,9 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.ClientStub", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2", "AspireMaui2\AspireMaui2.csproj", "{4C166D3F-5450-4A8D-803A-609166FC1E7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.Blazor.Mobile", "AspireMaui2.Blazor\AspireMaui2.Blazor.Mobile.csproj", "{4AD79710-A591-4480-857A-7AC42EDDE8E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.Blazor.Mobile", "AspireMaui2.Blazor.Mobile\AspireMaui2.Blazor.Mobile.csproj", "{4AD79710-A591-4480-857A-7AC42EDDE8E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.Blazor.Mobile.ClientStub", "AspireMaui2.Blazor.ClientStub\AspireMaui2.Blazor.Mobile.ClientStub.csproj", "{9EB336B5-2BF8-4486-82C4-0D385BBA087B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.Blazor.Mobile.ClientStub", "AspireMaui2.Blazor.Mobile.ClientStub\AspireMaui2.Blazor.Mobile.ClientStub.csproj", "{9EB336B5-2BF8-4486-82C4-0D385BBA087B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMaui2.Web", "AspireMaui2.Web\AspireMaui2.Web\AspireMaui2.Web.csproj", "{6881EFF9-759F-44A6-B1D6-D25D9398BED5}"
 EndProject

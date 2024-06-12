@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AspireMaui2.ApiService\AspireMaui2.ApiService.csproj" />
     <ProjectReference Include="..\AspireMaui2.ClientStub\AspireMaui2.ClientStub.csproj" />
+    <ProjectReference Include="..\AspireMaui2.Blazor.Mobile.ClientStub\AspireMaui2.Blazor.Mobile.ClientStub.csproj" />
     <ProjectReference Include="..\AspireMaui2.Web\AspireMaui2.Web\AspireMaui2.Web.csproj" />
   </ItemGroup>
 
